@@ -34,8 +34,9 @@ $(document).ready(()=>{
   })
 
   function checked(elem){
-    debugger
-    return elem.find('span').toggleClass('shopping-item__checked')
+    // debugger
+    return elem.closest('div').prev().toggleClass('shopping-item__checked')
+    // console.log(elem.closest('div').prev());
   }
 
   $('body').on('click', '.shopping-item-toggle',(e)=>{
